@@ -663,6 +663,30 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden;
+  /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+  grid-area: sidebar;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -1185,6 +1209,25 @@ Liste des blocs de cours par type_de_cours
     width: 31%;
     margin: 1%;
   }
+}
+
+.nouvelles {
+  margin: 2% 4% 2% 3%;
+}
+
+.comment-respond {
+  display: none;
+}
+
+.site-main {
+  padding-top: 50px;
+}
+
+.widget-area {
+  padding-top: 50px;
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
 }
 
 /* local carrousel

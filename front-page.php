@@ -55,6 +55,14 @@ get_header();
 				$precedent = $tPropriété['typeCours'];
 			endwhile;?>
 			</section> <!-- fin section cours -->
+
+			<section class="nouvelles">
+			    
+				<section></section>			
+			</section>
+
+
+
 		<?php endif; ?>
 
 
@@ -68,17 +76,7 @@ get_footer();
 
 function convertirTableau(&$tPropriété)
 {
-	/*
-	$titre = get_the_title(); 
-	// 582-1W1 Mise en page Web (75h)
-	$sigle = substr($titre, 0, 7);
-	$nbHeure = substr($titre,-4,3);
-	$titrePartiel =substr($titre,8,-6);
-	$session = substr($titre, 4,1);
-	// $contenu = get_the_content();
-	// $resume = substr($contenu, 0, 200);
-	$typeCours = get_field('type_de_cours');
-*/
+	
 
 	$tPropriété['titre'] = get_the_title(); 
 	$tPropriété['sigle'] = substr($tPropriété['titre'], 0, 7);
