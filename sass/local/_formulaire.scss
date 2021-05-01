@@ -1,0 +1,28 @@
+.nouvelles{
+    width: 90vw;
+    display: flex;
+    justify-content: left;
+
+    @include desktop {
+        width: 60vw;
+    }
+}
+
+.admin-rapid{
+    background-color: rgb(185, 185, 185);
+
+    section{
+        width: 90vw;
+        margin: 3vw;
+    }
+
+    @include tablet {
+        width: 75vw;
+    
+
+    section{
+    margin: 3vw;
+    width: 70vw;
+    }
+    }
+}

@@ -1219,6 +1219,10 @@ Liste des blocs de cours par type_de_cours
   display: none;
 }
 
+.site-info {
+  display: none;
+}
+
 .site-main {
   padding-top: 50px;
 }
@@ -1284,11 +1288,13 @@ Liste des blocs de cours par type_de_cours
 }
 
 .carrousel-2 .slide__conteneur .slide {
+  border-radius: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 800px) {
@@ -1355,17 +1361,17 @@ Liste des blocs de cours par type_de_cours
 }
 
 /*----------------radio---------------*/
-.radio {
+.ctrl-carrousel {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
 
-.radio input {
+.ctrl-carrousel input {
   margin: 1rem;
 }
 
-.radio input[type='radio']:after {
+.ctrl-carrousel input[type='radio']:after {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -1378,7 +1384,7 @@ Liste des blocs de cours par type_de_cours
   visibility: visible;
 }
 
-.radio input[type='radio']:checked:after {
+.ctrl-carrousel input[type='radio']:checked:after {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -1621,4 +1627,36 @@ La barre du millieu
 
 .flip-card-back .entry-footer {
   display: none;
+}
+
+/*-------------------------------local formulaire----------*/
+.nouvelles {
+  width: 90vw;
+  display: flex;
+  justify-content: left;
+}
+
+@media (min-width: 1200px) {
+  .nouvelles {
+    width: 60vw;
+  }
+}
+
+.admin-rapid {
+  background-color: #b9b9b9;
+}
+
+.admin-rapid section {
+  width: 90vw;
+  margin: 3vw;
+}
+
+@media (min-width: 800px) {
+  .admin-rapid {
+    width: 75vw;
+  }
+  .admin-rapid section {
+    margin: 3vw;
+    width: 70vw;
+  }
 }

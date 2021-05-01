@@ -20,11 +20,13 @@
         align-items: center;
         width : 50vw;
         .slide {
+            border-radius: 5px;
             width : 100%;
             display : flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            text-align: center;
             @include tablet {
                & {
                 width : 60%;
@@ -89,7 +91,7 @@
 
 /*----------------radio---------------*/
 
-.radio{
+.ctrl-carrousel{
     width: 100vw;
     display: flex;
     justify-content: center;
