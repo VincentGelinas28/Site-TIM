@@ -43,7 +43,7 @@ get_header();
 						<?php endif; ?>
 					<?php endif; ?>	
 					<h2><?php echo $tPropriété['typeCours'] ?></h2>
-					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ? 'class="carrousel-2"':'class="bloc"'); ?>>
+					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique',]) ? 'class="carrousel-2"':'class="bloc"'); ?>>
 				<?php endif ?>	
 
 				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ) : 
@@ -55,6 +55,19 @@ get_header();
 				$precedent = $tPropriété['typeCours'];
 			endwhile;?>
 			</section> <!-- fin section cours -->
+			<!-- --------------------Mes projet----------------- -->
+			<section class="mes_projet">
+				<h2>Mes Projets</h2>
+			<div>
+				
+			    <div><img src="http://localhost/4w4-3/wp-content/uploads/2021/05/arnold_tp.jpg" alt=""></div>
+				<div><img src="http://localhost/4w4-3/wp-content/uploads/2021/05/exercice-1.jpg" alt=""></div>
+				<div><img src="http://localhost/4w4-3/wp-content/uploads/2021/05/Gelinas_Vincent_tp_IMG.jpg" alt=""></div>
+				<div><img src="http://localhost/4w4-3/wp-content/uploads/2021/05/lilbo.jpg" alt=""></div>
+				<div><img src="http://localhost/4w4-3/wp-content/uploads/2021/05/gelinas_Vincent_moto.jpg" alt=""></div>
+			</div>
+			</section>
+
 
 			<!-- formulaire d'ajout d'un acrticle de categorie nouvelles -->
 			<sction class="admin-rapid">
@@ -63,7 +76,7 @@ get_header();
 				<input type="text" name="title" placeholder="Titre">
 				<textarea name="content" placeholder="Contenue"></textarea>
 				<button id='bout-rapide'>Créer une Nouvelle</button>
-                </section>
+               </section>
 			</sction>
 
 
@@ -76,9 +89,6 @@ get_header();
 
 
 		<?php endif; ?>
-
-
-	
 
 	</main><!-- #main -->
 
@@ -97,3 +107,5 @@ function convertirTableau(&$tPropriété)
 	$tPropriété['session'] = substr($tPropriété['titre'], 4,1);
 	$tPropriété['typeCours'] = get_field('type_de_cours');
 }
+
+

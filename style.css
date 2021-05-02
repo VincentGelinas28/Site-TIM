@@ -1227,11 +1227,26 @@ Liste des blocs de cours par type_de_cours
   padding-top: 50px;
 }
 
-.widget-area {
+#secondary {
   padding-top: 50px;
   background-color: #cfcfcf;
   display: flex;
   flex-direction: column;
+}
+
+/*---------------mes projet-----------------*/
+.mes_projet div {
+  width: 90vw;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mes_projet div div {
+  width: 300px;
+  margin: 10px;
 }
 
 /* local carrousel

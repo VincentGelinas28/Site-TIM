@@ -132,9 +132,25 @@ function theme4w4_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
+		
 	);
+
+	if ( function_exists('register_sidebar') ) {
+
+		register_sidebar(array(
+		'name'          => esc_html__( 'Sidebar2', 'theme4w4' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>'
+		));}
 }
+
+
 add_action( 'widgets_init', 'theme4w4_widgets_init' );
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -229,3 +245,5 @@ function extraire_cours_front_page($query){
 }
 }
 add_action('pre_get_posts','extraire_cours_front_page');
+
+
