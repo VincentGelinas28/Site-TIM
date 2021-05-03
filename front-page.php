@@ -68,7 +68,7 @@ get_header();
 			</div>
 			</section>
 
-
+			<?PHP if (current_user_can('administrator')) : ?>
 			<!-- formulaire d'ajout d'un acrticle de categorie nouvelles -->
 			<sction class="admin-rapid">
 				<section>
@@ -78,7 +78,7 @@ get_header();
 				<button id='bout-rapide'>Créer une Nouvelle</button>
                </section>
 			</sction>
-
+            <?php endif?>
 
 			<section class="nouvelles">
 			    
