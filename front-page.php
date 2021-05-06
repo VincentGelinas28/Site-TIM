@@ -46,7 +46,8 @@ get_header();
 					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Image 2d/3d']) ? 'class="carrousel-2"':'class="bloc"'); ?>>
 				<?php endif ?>	
 
-				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Image 2d/3d']) ) : 
+				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Image 2d/3d']) ) :
+				        get_the_post_thumbnail('thumbnail'); 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
 				else :		
