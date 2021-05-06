@@ -1,5 +1,5 @@
 /*!
-Theme Name: theme4w4
+Theme Name: Gelinas_vincent_4w4
 Theme URI: http://underscores.me/
 Author: eddy martin
 Author URI: http://referenced.ca
@@ -9,13 +9,13 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: theme4w4
+Text Domain: Gelinas_vincent_4w4
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-theme4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Gelinas_vincent_4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -120,3 +120,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /*-------------------------------local formulaire----------*/
 @import "local/formulaire";
+
+/*-------------------------------local page----------*/
+@import "local/page";

@@ -34,7 +34,7 @@ get_header();
 				if ($tPropriété['typeCours'] != $precedent): 
 					if ("XXXXXX" != $precedent)	: ?>
 						</section>
-						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique'])) : ?>
+						<?php if (in_array($precedent, ['Web', 'Jeu', 'Spécifique','Conception'])) : ?>
 							<section class="ctrl-carrousel">
 								<?php echo $chaine_bouton_radio;
 								$chaine_bouton_radio = '';
@@ -43,10 +43,10 @@ get_header();
 						<?php endif; ?>
 					<?php endif; ?>	
 					<h2><?php echo $tPropriété['typeCours'] ?></h2>
-					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique',]) ? 'class="carrousel-2"':'class="bloc"'); ?>>
+					<section <?php echo (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Conception']) ? 'class="carrousel-2"':'class="bloc"'); ?>>
 				<?php endif ?>	
 
-				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique']) ) : 
+				<?php if (in_array($tPropriété['typeCours'], ['Web', 'Jeu', 'Spécifique','Conception']) ) : 
 						get_template_part( 'template-parts/content', 'cours-carrousel' ); 
 						$chaine_bouton_radio .= '<input class="rad-carrousel"  type="radio" name="rad-'.$tPropriété['typeCours'].'">';
 				else :		

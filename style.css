@@ -1,5 +1,5 @@
 /*!
-Theme Name: theme4w4
+Theme Name: Gelinas_vincent_4w4
 Theme URI: http://underscores.me/
 Author: eddy martin
 Author URI: http://referenced.ca
@@ -9,13 +9,13 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: theme4w4
+Text Domain: Gelinas_vincent_4w4
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-theme4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Gelinas_vincent_4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -665,8 +665,15 @@ textarea {
 --------------------------------------------------------------*/
 .site {
   display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-columns: 100%;
+  grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+}
+
+@media (min-width: 1200px) {
+  .site {
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "header header" "main sidebar" "footer footer";
+  }
 }
 
 .site-header {
@@ -681,6 +688,10 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  padding-top: 50px;
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-footer {
@@ -1227,13 +1238,6 @@ Liste des blocs de cours par type_de_cours
   padding-top: 50px;
 }
 
-#secondary {
-  padding-top: 50px;
-  background-color: #cfcfcf;
-  display: flex;
-  flex-direction: column;
-}
-
 /*---------------mes projet-----------------*/
 .mes_projet div {
   width: 90vw;
@@ -1674,4 +1678,9 @@ La barre du millieu
     margin: 3vw;
     width: 70vw;
   }
+}
+
+/*-------------------------------local page----------*/
+.entry-header h1, .page-header h1 {
+  font-size: 3rem;
 }
