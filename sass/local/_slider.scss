@@ -8,7 +8,7 @@
 
     &:nth-of-type(2){
         article{
-            border-radius: 5px;
+            /* border-radius: 5px; */
             background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
             overflow: hidden;
         }
@@ -20,7 +20,7 @@
         align-items: center;
         width : 50vw;
         .slide {
-            border-radius: 5px;
+            
             width : 100%;
             display : flex;
             flex-direction: row;
@@ -34,7 +34,7 @@
             }
 
             img{
-                display : block;
+                /* display : block; */
                 margin : 2%;
             }
             .slide__info{
@@ -50,10 +50,10 @@
             }
             &:nth-of-type(1){
                 background-color: rgb(206, 206, 206);
-			    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); */
             }
             &:nth-of-type(2){
-                    border-radius: 5px;
+                    /* border-radius: 5px; */
                     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
                     overflow: hidden;
             }
@@ -132,6 +132,21 @@ input[type='radio']:checked:after {
 .carrousel-2{
     .slide{
         background-color: rgb(206, 206, 206);
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        height: 180px;
+
+        img{
+            display: none;
+        }
+
+        @include tablet{
+            border-radius: 5px;
+        }
+
+        @include desktop{
+            img{
+                display: block;
+            }
+        }
     }
 }
