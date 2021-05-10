@@ -1697,6 +1697,11 @@ La barre du millieu
   }
 }
 
+#annonce {
+  margin-top: 20px;
+  background-color: rgba(255, 0, 0, 0.664);
+}
+
 /*-------------------------------local page----------*/
 .entry-header h1, .page-header h1 {
   font-size: 3rem;

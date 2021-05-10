@@ -16,6 +16,9 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+
+			<section id="annonce"></section>
+
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
@@ -73,10 +76,10 @@ get_header();
 			<!-- formulaire d'ajout d'un acrticle de categorie nouvelles -->
 			<sction class="admin-rapid">
 				<section>
-			    <h3>Ajouter une Nouvelle</h3>
+			    <h3>Ajouter une Annonce</h3>
 				<input type="text" name="title" placeholder="Titre">
 				<textarea name="content" placeholder="Contenue"></textarea>
-				<button id='bout-rapide'>Créer une Nouvelle</button>
+				<button id='bout-rapide'>Créer une Annonce</button>
                </section>
 			</sction>
             <?php endif?>

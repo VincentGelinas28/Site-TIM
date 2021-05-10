@@ -1,14 +1,18 @@
 (function(){
 	//let bouton = document.getElementById('bout_nouvelles')
     let nouvelles = document.querySelector('.nouvelles section')
+    let annonce = document.getElementById('annonce')
 
 	//bouton.addEventListener('mousedown', monAjax)
-	window.addEventListener('load', monAjax)
+	window.addEventListener('load', function(){
+        monAjax(monObjJS.URLDomaine + '/wp-json/wp/v2/posts?categories=33', nouvelles)
+        monAjax(monObjJS.URLDomaine + '/wp-json/wp/v2/posts?categories=37', annonce)
+    })
 
-	function monAjax()
+	function monAjax(requete, elmDom)
 {
    let maRequete = new XMLHttpRequest();
-   maRequete.open('GET', monObjJS.URLDomaine + '/wp-json/wp/v2/posts?categories=33');
+   maRequete.open('GET', requete );
    maRequete.onload = function () {
        if (maRequete.status >= 200 && maRequete.status < 400) {
            let data = JSON.parse(maRequete.responseText);
@@ -17,7 +21,7 @@
 			   chaine += '<h2>' + elm.title.rendered + '</h2>'
 			   chaine +=  elm.content.rendered
 		   }
-		   nouvelles.innerHTML = chaine;
+		   elmDom.innerHTML = chaine;
         }
        
         else {
@@ -39,7 +43,7 @@ bouton_ajout.addEventListener('mousedown', function(){
         "title" : document.querySelector('.admin-rapid [name="title"]').value,
         "content" : document.querySelector('.admin-rapid [name="content"]').value,
         "status" : "publish",
-        "categories" : [33]
+        "categories" : [37]
     }
 
     console.log(JSON.stringify(monArticle))
