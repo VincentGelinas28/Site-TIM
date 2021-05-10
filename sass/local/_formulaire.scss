@@ -27,6 +27,25 @@
     }
 }
 
+.admin-rapid_nouvelle{
+    background-color: rgb(185, 185, 185);
+
+    section{
+        width: 90vw;
+        margin: 3vw;
+    }
+
+    @include tablet {
+        width: 75vw;
+    
+
+    section{
+    margin: 3vw;
+    width: 70vw;
+    }
+    }
+}
+
 #annonce{
     margin-top: 20px;
     background-color: rgba(255, 0, 0, 0.664);

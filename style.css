@@ -1697,6 +1697,25 @@ La barre du millieu
   }
 }
 
+.admin-rapid_nouvelle {
+  background-color: #b9b9b9;
+}
+
+.admin-rapid_nouvelle section {
+  width: 90vw;
+  margin: 3vw;
+}
+
+@media (min-width: 800px) {
+  .admin-rapid_nouvelle {
+    width: 75vw;
+  }
+  .admin-rapid_nouvelle section {
+    margin: 3vw;
+    width: 70vw;
+  }
+}
+
 #annonce {
   margin-top: 20px;
   background-color: rgba(255, 0, 0, 0.664);

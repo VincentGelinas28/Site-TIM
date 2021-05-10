@@ -82,6 +82,15 @@ get_header();
 				<button id='bout-rapide'>Créer une Annonce</button>
                </section>
 			</sction>
+
+			<sction class="admin-rapid_nouvelle">
+				<section>
+			    <h3>Ajouter une Nouvelle</h3>
+				<input type="text" name="title" placeholder="Titre">
+				<textarea name="content" placeholder="Contenue"></textarea>
+				<button id='bout-rapide_nouvelle'>Créer une Nouvelle</button>
+               </section>
+			</sction>
             <?php endif?>
 
 			<section class="nouvelles">
