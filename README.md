@@ -1,4 +1,4 @@
-
+Le nom de mon dossier s'apelle "Gelinas_vincent_4w4"
 TIM – Techniques d'intégration multimédia
 
 Vincent Gélinas
