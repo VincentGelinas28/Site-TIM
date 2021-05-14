@@ -6,7 +6,6 @@
 		for (const elmCarrousel of carrousel)
 		{
 			let bout = ctrlCarrousel[noCtrlCarrousel++].querySelectorAll('.rad-carrousel')
-			//noCtrlCarrousel = noCtrlCarrousel +1;
 			console.log(bout.length)
 
 			let k =0;

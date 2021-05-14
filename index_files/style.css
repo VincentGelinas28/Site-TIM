@@ -1,5 +1,5 @@
 /*!
-Theme Name: theme4w4
+Theme Name: Gelinas_vincent_4w4
 Theme URI: http://underscores.me/
 Author: eddy martin
 Author URI: http://referenced.ca
@@ -9,13 +9,13 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: theme4w4
+Text Domain: Gelinas_vincent_4w4
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-theme4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Gelinas_vincent_4w4 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -665,8 +665,15 @@ textarea {
 --------------------------------------------------------------*/
 .site {
   display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-columns: 100%;
+  grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+}
+
+@media (min-width: 1200px) {
+  .site {
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "header header" "main sidebar" "footer footer";
+  }
 }
 
 .site-header {
@@ -681,6 +688,10 @@ textarea {
 
 .widget-area {
   grid-area: sidebar;
+  padding-top: 50px;
+  background-color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-footer {
@@ -844,11 +855,11 @@ menu tablet
 @keyframes anim-sous-menu {
   0% {
     opacity: 0;
-    transform: translateX(0) translateY(100px);
+    /* transform : translateX(0) translateY(100px); */
   }
   100% {
     opacity: 1;
-    transform: translateX(0) translateY(0);
+    /* transform : translateX(0) translateY(0); */
   }
 }
 
@@ -1227,13 +1238,6 @@ Liste des blocs de cours par type_de_cours
   padding-top: 50px;
 }
 
-#secondary {
-  padding-top: 50px;
-  background-color: #cfcfcf;
-  display: flex;
-  flex-direction: column;
-}
-
 /*---------------mes projet-----------------*/
 .mes_projet div {
   width: 90vw;
@@ -1290,7 +1294,7 @@ Liste des blocs de cours par type_de_cours
 }
 
 .carrousel-2:nth-of-type(2) article {
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   overflow: hidden;
 }
@@ -1303,7 +1307,6 @@ Liste des blocs de cours par type_de_cours
 }
 
 .carrousel-2 .slide__conteneur .slide {
-  border-radius: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1319,7 +1322,7 @@ Liste des blocs de cours par type_de_cours
 }
 
 .carrousel-2 .slide__conteneur .slide img {
-  display: block;
+  /* display : block; */
   margin: 2%;
 }
 
@@ -1339,11 +1342,11 @@ Liste des blocs de cours par type_de_cours
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
   background-color: #cecece;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); */
 }
 
 .carrousel-2 .slide__conteneur .slide:nth-of-type(2) {
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   overflow: hidden;
 }
@@ -1377,6 +1380,7 @@ Liste des blocs de cours par type_de_cours
 
 /*----------------radio---------------*/
 .ctrl-carrousel {
+  margin-bottom: 50px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1406,7 +1410,7 @@ Liste des blocs de cours par type_de_cours
   top: -4px;
   left: -2px;
   position: relative;
-  background-color: #60548b;
+  background-color: #707070;
   content: '';
   display: inline-block;
   visibility: visible;
@@ -1416,6 +1420,23 @@ Liste des blocs de cours par type_de_cours
 .carrousel-2 .slide {
   background-color: #cecece;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  height: 180px;
+}
+
+.carrousel-2 .slide img {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .carrousel-2 .slide {
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carrousel-2 .slide img {
+    display: block;
+  }
 }
 
 /* local burger
@@ -1674,4 +1695,33 @@ La barre du millieu
     margin: 3vw;
     width: 70vw;
   }
+}
+
+.admin-rapid_nouvelle {
+  background-color: #b9b9b9;
+}
+
+.admin-rapid_nouvelle section {
+  width: 90vw;
+  margin: 3vw;
+}
+
+@media (min-width: 800px) {
+  .admin-rapid_nouvelle {
+    width: 75vw;
+  }
+  .admin-rapid_nouvelle section {
+    margin: 3vw;
+    width: 70vw;
+  }
+}
+
+#annonce {
+  margin-top: 20px;
+  background-color: rgba(255, 0, 0, 0.664);
+}
+
+/*-------------------------------local page----------*/
+.entry-header h1, .page-header h1 {
+  font-size: 3rem;
 }
